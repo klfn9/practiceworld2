@@ -15,4 +15,10 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 
   # Defines the root path route ("/")
   # root "articles#index"
+  
+  # ユーザー側
+scope module: :public do
+  resources :trips, only: [:index]
+end
+
 end
