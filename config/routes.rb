@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to:'public/trips#index'
+
   # 顧客用
 # URL /users/sign_in ...
 devise_for :users,skip: [:passwords], controllers: {
@@ -15,10 +18,10 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 
   # Defines the root path route ("/")
   # root "articles#index"
-  
+
   # ユーザー側
 scope module: :public do
-  resources :trips, only: [:index]
+  resources :trips, only: [:new, :create, :index]
 end
 
 end
