@@ -16,6 +16,7 @@ class Public::TripsController < ApplicationController
   end
 
   def index
+    @trips = Trip.all
   end
 
   # 投稿データのストロングパラメータ
