@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to:'public/trips#index'
+  root to: 'public/trips#index'
 
   # 顧客用
 # URL /users/sign_in ...
